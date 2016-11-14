@@ -12,14 +12,14 @@ It originated as part of the test suite of the
 Steelwheels contains 13 tables:
 
 | Table | Row count |
-| ----- | --------- |
+| ----- | --------: |
 | customer_w_ter | 126 |
 | customers | 126 |
 | department_managers | 4 |
 | employees | 23 |
 | offices | 7 |
-| orderdetails | 3001 |
-| orderfact | 2996 |
+| orderdetails | 3,001 |
+| orderfact | 2,996 |
 | orders | 330 |
 | payments | 272 |
 | products | 110 |
