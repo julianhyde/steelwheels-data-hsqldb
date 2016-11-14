@@ -25,7 +25,7 @@ limitations under the License.
   </parent>
 
   <artifactId>steelwheels-data-hsqldb</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1</version>
   <packaging>jar</packaging>
 
   <name>steelwheels-data-hsqldb</name>
@@ -92,7 +92,7 @@ limitations under the License.
     <connection>scm:git:git://github.com/julianhyde/steelwheels-data-hsqldb.git</connection>
     <developerConnection>scm:git:git@github.com:julianhyde/steelwheels-data-hsqldb.git</developerConnection>
     <url>scm:git:git://github.com/julianhyde/steelwheels-data-hsqldb.git</url>
-    <tag>HEAD</tag>
+    <tag>steelwheels-data-hsqldb-0.1</tag>
   </scm>
 
   <prerequisites>
