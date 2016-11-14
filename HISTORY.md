@@ -3,7 +3,7 @@
 For a full list of releases, see
 <a href="https://github.com/julianhyde/steelwheels-data-hsqldb/releases">github</a>.
 
-## <a href="https://github.com/julianhyde/steelwheels-data-hsqldb/releases/tag/steelwheels-data-hsqldb-0.1">0.1</a> / 2016-11-13
+## <a href="https://github.com/julianhyde/steelwheels-data-hsqldb/releases/tag/steelwheels-data-hsqldb-0.1">0.1</a> / 2016-11-14
 
 * Publish releases to <a href="http://search.maven.org/">Maven Central</a>
 * Sign jars
