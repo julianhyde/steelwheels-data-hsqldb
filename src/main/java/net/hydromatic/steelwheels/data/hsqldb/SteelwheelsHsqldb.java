@@ -16,7 +16,13 @@
  */
 package net.hydromatic.steelwheels.data.hsqldb;
 
-/** Steelwheels data set in hsqldb format. */
+/** Steelwheels data set in hsqldb format.
+ *
+ * <p>If you log in using {@link #USER} and {@link #PASSWORD}, the session's
+ * initial schema will be "steelwheels". You can also log in using user = "sa",
+ * password = "", but the initial schema will be "PUBLIC" (hsqldb's default
+ * initial schema).
+ */
 public class SteelwheelsHsqldb {
   /** URI of the hsqldb database. */
   public static final String URI = "jdbc:hsqldb:res:steelwheels";
