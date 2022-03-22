@@ -67,7 +67,7 @@ add the artifact to your project's dependencies:
 <dependency>
   <groupId>net.hydromatic</groupId>
   <artifactId>steelwheels-data-hsqldb</artifactId>
-  <version>0.1</version>
+  <version>0.2</version>
 </dependency>
 ```
 
@@ -76,18 +76,18 @@ Now you can connect using Java code:
 ```java
 import java.sql.Connection;
 
-Connection connection =
-  DriverManager.getConnection("jdbc:hsqldb:res:steelwheels", "steelwheels", "");
-Statement statement = connection.createStatement();
-ResultSet resultSet =
-  statement.executeQuery("select lastname"\n"
-      + "from \"steelwheels\".\"employees\"");
-while (resultSet.next()) {
-  System.out.println(resultSet.getInt(1) + ":" + resultSet.getString(2));
+final String url = "jdbc:hsqldb:res:steelwheels";
+final String user = "STEELWHEELS";
+final String password = "STEELWHEELS";
+final String sql = "select lastname"\n"
+    + "from \"steelwheels\".\"employees\"";
+try (Connection c = DriverManager.getConnection(url, user, password);
+    Statement s = c.createStatement();
+    ResultSet r = s.executeQuery(sql)) {
+  while (r.next()) {
+    System.out.println(r.getString(1));
+  }
 }
-resultSet.close();
-statement.close();
-connection.close();
 ```
 
 You can also connect using a JDBC interface such as [sqlline](https://github.com/julianhyde/sqlline).
@@ -95,9 +95,27 @@ Make sure that `steelwheels-data-hsqldb.jar` is on the class path, and start `sq
 
 ```sql
 $ ./sqlline
-sqlline version 1.2.0
-sqlline> !connect jdbc:hsqldb:res:steelwheels steelwheels ""
+sqlline version 1.12.0
+sqlline> !connect jdbc:hsqldb:res:steelwheels sa ""
 0: jdbc:hsqldb:res:steelwheels> select count(*) from "steelwheels"."employees";
++----------------------+
+|          C1          |
++----------------------+
+| 23                   |
++----------------------+
+1 row selected (0.004 seconds)
+0: jdbc:hsqldb:res:steelwheels> !quit
+```
+
+If you use username and password "STEELWHEELS" and "STEELWHEELS", the
+default schema is "steelwheels", so you can omit the table prefix, if
+you wish:
+
+```sql
+$ ./sqlline
+sqlline version 1.12.0
+sqlline> !connect jdbc:hsqldb:res:steelwheels STEELWHEELS STEELWHEELS
+0: jdbc:hsqldb:res:steelwheels> select count(*) from "employees";
 +----------------------+
 |          C1          |
 +----------------------+
@@ -118,7 +136,7 @@ Get steelwheels-data-hsqldb from
 <dependency>
   <groupId>net.hydromatic</groupId>
   <artifactId>steelwheels-data-hsqldb</artifactId>
-  <version>0.1</version>
+  <version>0.2</version>
 </dependency>
 ```
 
