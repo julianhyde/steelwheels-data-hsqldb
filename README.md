@@ -101,10 +101,18 @@ Get steelwheels-data-hsqldb from
 
 ### Download and build
 
+Java version 8 or higher.
+
 ```bash
 $ git clone git://github.com/julianhyde/steelwheels-data-hsqldb.git
 $ cd steelwheels-data-hsqldb
-$ mvn install
+$ ./mvnw install
+```
+
++On Windows, the last line is
+
+```bash
+> mvnw install
 ```
 
 ### Make a release
@@ -114,19 +122,22 @@ See [hydromatic-parent](https://github.com/julianhyde/hydromatic-parent).
 ## See also
 
 Similar data sets:
+* [chinook-data-hsqldb](https://github.com/julianhyde/chinook-data-hsqldb)
 * [foodmart-data-hsqldb](https://github.com/julianhyde/foodmart-data-hsqldb)
 * [scott-data-hsqldb](https://github.com/julianhyde/scott-data-hsqldb)
+* [steelwheels-data-hsqldb](https://github.com/julianhyde/steelwheels-data-hsqldb)
 
 ## More information
 
 * License: Apache License, Version 2.0
 * Author: Julian Hyde
-* Blog: http://julianhyde.blogspot.com
+* Blog: http://blog.hydromatic.net
 * Project page: http://www.hydromatic.net/steelwheels-data-hsqldb
-* Source code: http://github.com/julianhyde/steelwheels-data-hsqldb
+* Source code: https://github.com/julianhyde/steelwheels-data-hsqldb
+* Distribution: <a href="https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22steelwheels-data-hsqldb%22">Maven Central</a>
 * Developers list:
   <a href="mailto:dev@calcite.apache.org">dev at calcite.apache.org</a>
-  (<a href="http://mail-archives.apache.org/mod_mbox/calcite-dev/">archive</a>,
+  (<a href="https://mail-archives.apache.org/mod_mbox/calcite-dev/">archive</a>,
   <a href="mailto:dev-subscribe@calcite.apache.org">subscribe</a>)
 * Issues: https://github.com/julianhyde/steelwheels-data-hsqldb/issues
 * <a href="HISTORY.md">Release notes and history</a>
