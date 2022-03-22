@@ -28,6 +28,7 @@ public class SteelwheelsHsqldb {
   public static final String URI = "jdbc:hsqldb:res:steelwheels";
   public static final String USER = "STEELWHEELS";
   public static final String PASSWORD = "STEELWHEELS";
+  public static final String SCHEMA = "steelwheels";
 }
 
 // End SteelwheelsHsqldb.java
