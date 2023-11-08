@@ -19,7 +19,7 @@ License.
 {% endcomment %}
 -->
 [![Build Status](https://github.com/julianhyde/steelwheels-data-hsqldb/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/julianhyde/steelwheels-data-hsqldb/actions?query=branch%3Amain)
-
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.hydromatic/steelwheels-data-hsqldb/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.hydromatic/steelwheels-data-hsqldb)
 
 # steelwheels-data-hsqldb
 Steelwheels data set in hsqldb format
